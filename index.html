@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mã hóa an toàn bảo mật hệ thống thông tin</title>
+    <style>
+      body {
+        color: white;
+        background-color: #333;
+      }
+      h2 {
+        text-align: center;
+      }
+      #ListAlgorithm,
+      #fix,
+      #AllResult {
+        display: flex;
+        justify-content: center;
+      }
+      #AllResult {
+        justify-content: space-around;
+        width: 40%;
+        margin: auto;
+      }
+      input {
+        width: 40%;
+        float: right;
+        height: 25px;
+        margin-top: 5px;
+        text-align: left;
+        text-indent: 5px;
+        font-size: 12.6pt;
+        border-radius: 5px;
+        border: solid 1.5px #d3d3d3;
+        -webkit-transition: 1s; /* Safari */
+        transition: 1s;
+      }
+      input[type="text"]:hover {
+        box-shadow: 0 0 5pt 0.5pt #d3d3d3;
+      }
+      input[type="text"]:focus {
+        box-shadow: 0 0 5pt 2pt #d3d3d3;
+        outline-width: 0px;
+      }
+      button {
+        width: 140px;
+        height: 45px;
+        font-family: "Roboto", sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+        font-weight: 680;
+      }
+
+      button:hover {
+        background-color: #008550;
+        box-shadow: 0px 15px 20px rgba(1, 117, 71, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+      }
+    </style>
+  </head>
+  <body>
+    <script src="algorithm.js"></script>
+    <h2>Nhập vào chuỗi cần mã hóa</h2>
+    <div id="fix"><input type="text" id="input" /></div>
+    <h2>Chọn giải thuật</h2>
+    <div id="ListAlgorithm">
+      <button
+        onclick="start(document.getElementById('input').value.toLowerCase(),'Caesar')"
+      >
+        Caesar
+      </button>
+      <button
+        onclick="start(document.getElementById('input').value.toLowerCase(),'Cipher')"
+      >
+        Cipher
+      </button>
+    </div>
+    <div id="AllResult">
+      <div>
+        <h3>Kết quả mã hóa</h3>
+        <span id="encode"></span>
+      </div>
+      <div>
+        <h3>Kết quả giải mã</h3>
+        <span id="decode"></span>
+      </div>
+    </div>
+  </body>
+</html>
