@@ -80,9 +80,9 @@ function cipherAlgorithm(input) {
     } else encodeResult = encodeResult + " ";
   }
   let decodeResult = "";
-  for (let i = 0; i < encodeResult.length; i++) {
-    if (encodeResult[i] !== " ") {
-      const index = asciiExplore.indexOf(encodeResult[i]); //get index
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] !== " ") {
+      const index = asciiExplore.indexOf(input[i]); //get index
       decodeResult = decodeResult + ascii[index];
     } else decodeResult += " ";
   }
@@ -126,9 +126,9 @@ function caesarAlgorithm(input, key) {
     } else encodeResult = encodeResult + " ";
   }
   let decodeResult = "";
-  for (let i = 0; i < encodeResult.length; i++) {
-    if (encodeResult[i] !== " ") {
-      const index = ascii.indexOf(encodeResult[i]);
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] !== " ") {
+      const index = ascii.indexOf(input[i]);
       const b = index - key;
       if (b >= 0) decodeResult = decodeResult + ascii[b];
       else decodeResult = decodeResult + ascii[26 + (b % 26)];
