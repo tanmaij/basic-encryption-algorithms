@@ -85,7 +85,22 @@
       <button
         onclick="start(document.getElementById('input').value.toLowerCase(),'Cipher')"
       >
-        Cipher
+        Simple Cipher
+      </button>
+      <button
+        onclick="start(document.getElementById('input').value.toLowerCase(),'Polyalphabetic cipher')"
+      >
+        Polyalphabetic cipher
+      </button>
+      <button
+        onclick="start(document.getElementById('input').value.toLowerCase(),'One Time Pad')"
+      >
+        One Time Pad
+      </button>
+      <button
+        onclick="start(document.getElementById('input').value.toLowerCase(),'RC4')"
+      >
+        RC4
       </button>
     </div>
     <div id="AllResult">
@@ -98,5 +113,6 @@
         <span id="decode"></span>
       </div>
     </div>
+    <p id="keyRandom" style="text-align: center"></p>
   </body>
 </html>
